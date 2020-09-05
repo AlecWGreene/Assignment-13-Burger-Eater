@@ -8,7 +8,7 @@ const util = require("util");
 const path = require("path");
 
 // Load scripts
-//const routes = require("");
+const loginRouter = require("");
 
 // Initialize express 
 const app = express();
