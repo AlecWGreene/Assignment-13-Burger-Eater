@@ -6,24 +6,7 @@ const expHB = require("express-handlebars");
 const fs = require("fs");
 const util = require("util");
 const path = require("path");
-const passport = require("passport");
-const LocalStrategy = require("passport-local").Strategy;
-
-// Setup passport
-passport.use(new LocalStrategy(
-    function(username, password, done) {
-      User.findOne({ username: username }, function(err, user) {
-        if (err) { return done(err); }
-        if (!user) {
-          return done(null, false, { message: "Incorrect username." });
-        }
-        if (!user.validPassword(password)) {
-          return done(null, false, { message: "Incorrect password." });
-        }
-        return done(null, user);
-      });
-    }
-  ));
+const session = require("express-session");
 
 // Load scripts
 const loginRouter = require("./lib/controllers/login");
@@ -41,6 +24,10 @@ app.use(express.json());
 // Configure handlebars 
 app.engine("handlebars", expHB({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+
+// Setup express sessions
+const secret = "Brown Dogs";
+app.use(session({ secret: secret, cookie: { maxAge: 240000 }}));
 
 // Setup routes
 app.use(loginRouter);

@@ -2,7 +2,7 @@
 // ============================================================
 
 function registerSession(arg_id){
-    sessionStorage.setItem("sessionId",arg_id);
+    sessionStorage.setItem("sessionId", JSON.stringify(arg_id));
 }
 
 // REGISTRATION METHODS
@@ -11,7 +11,6 @@ function registerSession(arg_id){
 function registerHandler(arg_event){
     // Prevent default
     arg_event.preventDefault();
-    console.log("Event data: ", arg_event.data);
 
     // Register user
     $.ajax({
@@ -31,7 +30,6 @@ function loginHandler(arg_event){
 
     // Prevent event's default
     arg_event.preventDefault();
-    console.log("Event data: ", arg_event.data);
     
     // Send login request
     $.ajax({
@@ -41,11 +39,11 @@ function loginHandler(arg_event){
         dataType: "json",
         data: JSON.stringify(arg_event.data)
     }).done(function(arg_response){
-        registerSession(arg_response.id);
-        $.ajax({
-            method: "GET",
-            url: "/register"
-        });
+        // Register user as logged in the session storage
+        registerSession(arg_response);
+
+        // Redirect
+        window.location = "/burger";
     });
 }
 
