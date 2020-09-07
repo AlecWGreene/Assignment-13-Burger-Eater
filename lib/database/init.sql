@@ -3,7 +3,7 @@ CREATE DATABASE burger_db;
 
 USE burger_db;
 
-CREATE TABLE user_table(id INT AUTO_INCREMENT PRIMARY KEY, user_name VARCHAR(30) NOT NULL, user_display VARCHAR(30) NOT NULL, user_hash VARCHAR(255) NOT NULL);
+CREATE TABLE user_table(id INT AUTO_INCREMENT PRIMARY KEY, user_name VARCHAR(30) NOT NULL, user_display VARCHAR(30) NOT NULL, user_hash VARCHAR(255) NOT NULL, logged_in BOOL DEFAULT FALSE);
 
 -- Procedure for creating new table for user --
 DELIMITER //

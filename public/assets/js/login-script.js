@@ -1,3 +1,10 @@
+// SESSION METHODS
+// ============================================================
+
+function registerSession(arg_id){
+    sessionStorage.setItem("sessionId",arg_id);
+}
+
 // REGISTRATION METHODS
 // ============================================================
 
@@ -33,9 +40,15 @@ function loginHandler(arg_event){
         contentType: "application/json",
         dataType: "json",
         data: JSON.stringify(arg_event.data)
+    }).done(function(arg_response){
+        registerSession(arg_response.id);
+        $.ajax({
+            method: "GET",
+            url: "/register"
+        });
     });
 }
 
-// Add event listeners
+// Add event listeners 
 $("#login-form").on("submit", { username: $("#input-username").val(), password: $("#input-password").val() }, loginHandler);
 $("#register-form").on("submit", { username: $("#register-username").val(), password: $("#register-password").val(), display: $("#register-display").val() }, registerHandler);
