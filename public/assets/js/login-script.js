@@ -12,10 +12,7 @@ function registerHandler(arg_event){
         method: "POST",
         contentType: "application/json",
         dataType: "json",
-        data: JSON.stringify(arg_event.data),
-        success: function(arg_data){
-            console.log("AJAX data: ", arg_data);
-        }
+        data: JSON.stringify(arg_event.data)
     });
 }
 
