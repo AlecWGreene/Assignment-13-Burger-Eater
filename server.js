@@ -11,6 +11,7 @@ const session = require("express-session");
 // Load scripts
 const loginRouter = require("./lib/controllers/login");
 const pageController = require("./lib/controllers/page-controller");
+const burgerRouter = require('./lib/controllers/burger');
 
 // Initialize express 
 const app = express();
@@ -32,7 +33,7 @@ app.use(session({ secret: secret, cookie: { maxAge: 240000, sameSite: "lax" }}))
 // Setup routes
 app.use(pageController);
 app.use(loginRouter);
-
+app.use(burgerRouter);
 
 // Initialize application
 app.listen(PORT, function() {
