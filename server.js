@@ -27,11 +27,12 @@ app.set("view engine", "handlebars");
 
 // Setup express sessions
 const secret = "Brown Dogs";
-app.use(session({ secret: secret, cookie: { maxAge: 240000 }}));
+app.use(session({ secret: secret, cookie: { maxAge: 240000, sameSite: "lax" }}));
 
 // Setup routes
-app.use(loginRouter);
 app.use(pageController);
+app.use(loginRouter);
+
 
 // Initialize application
 app.listen(PORT, function() {

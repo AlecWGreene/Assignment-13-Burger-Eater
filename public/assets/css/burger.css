@@ -1,0 +1,29 @@
+ /* =============== OPTIONS STYLING =============== */
+
+.burger-btn{
+    padding: 0.5rem 2rem;
+    margin: 0.5rem 1.5rem;
+}
+
+#save-btn{
+
+}
+
+#reset-btn{
+
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.burger-option{
+    padding: 0.5rem;
+    text-align: center;
+    width: 100%;
+    outline-color: aqua;
+    outline-width: 0.25rem;
+    outline-style: solid;
+    margin-top: 0.25rem;
+}

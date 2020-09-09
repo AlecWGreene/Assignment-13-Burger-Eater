@@ -7,7 +7,7 @@ CREATE TABLE user_table(id INT AUTO_INCREMENT PRIMARY KEY, user_name VARCHAR(30)
 
 -- Procedure for creating new table for user --
 DELIMITER //
-CREATE DEFINER=`root`@`localhost` PROCEDURE create_table(IN arg_id INT)
+CREATE PROCEDURE create_table(IN arg_id INT)
 BEGIN
     SET @dropTable = CONCAT("DROP TABLE IF EXISTS burger_table_", arg_id, ";");
     SET @createTable = CONCAT("CREATE TABLE burger_table_", arg_id, "(id INT AUTO_INCREMENT PRIMARY KEY, burger_name VARCHAR(30) NOT NULL, ingredients INT);");
