@@ -1,13 +1,14 @@
 {
   "name": "Assignment-13-Burger-Eater",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "doc": "jsdoc server.js lib/config/orm.js lib/controllers/burger.js lib/controllers/login.js lib/controllers/page-controller.js"
   },
   "keywords": [],
   "author": "",
@@ -23,5 +24,15 @@
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "sha256": "^0.2.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlecWGreene/Assignment-13-Burger-Eater.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AlecWGreene/Assignment-13-Burger-Eater/issues"
+  },
+  "homepage": "https://github.com/AlecWGreene/Assignment-13-Burger-Eater#readme",
+  "description": ""
 }
