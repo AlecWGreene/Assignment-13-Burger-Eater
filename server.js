@@ -29,7 +29,7 @@ app.set("view engine", "handlebars");
 
 // Setup express sessions
 const secret = "Brown Dogs";
-app.use(session({ secret: secret, cookie: { maxAge: 240000, sameSite: "lax" }}));
+app.use(session({ secret: secret, cookie: { maxAge: 2400000, sameSite: "lax" }}));
 
 // Setup routes
 app.use(pageController);
