@@ -1,5 +1,13 @@
 
+.container{
+    margin: auto;
+    min-height: 50vh;
+    height: 100%;
+    width: 60%;
+}
+
 /* ======== LOGIN MODAL ======== */
 .login-modal{
-    
+    padding: 2.5rem;
+    background-color: rgba(90,90,90,0.4);
 }

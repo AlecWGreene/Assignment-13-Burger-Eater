@@ -1,4 +1,7 @@
  /* =============== OPTIONS STYLING =============== */
+.container{
+    background-color: rgb(83, 163, 202);
+}
 
 .burger-btn{
     padding: 0.5rem 2rem;
@@ -29,4 +32,16 @@ h2{
     outline-width: 0.25rem;
     outline-style: solid;
     margin-top: 0.25rem;
+    background-color: red;
+}
+
+.burger-option:hover{
+    padding: 0.5rem;
+    text-align: center;
+    width: 100%;
+    outline-color: aqua;
+    outline-width: 0.25rem;
+    outline-style: solid;
+    margin-top: 0.25rem;
+    background-color: pink;
 }
