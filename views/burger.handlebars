@@ -1,87 +1,111 @@
-<div class="row no-gutters">
-    {{!-- User Input Flyout --}}
-    <div class="col-3">
-        {{!-- Buttons Container --}}
-        <div class="button-div w-100 d-flex flex-row justify-content-between">
-            <button class="burger-btn" id="save-btn">
-                Save
-            </button>
-            <button class="burger-btn" id="view-btn">
-                View
-            </button>
-            <button class="burger-btn" id="reset-btn">
-                Reset
-            </button>
+<nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand"> {{{displayName}}} </a>
+
+        <button id="btn btn-danger logout-btn">Log Out</button>
+    </nav>
+
+<div class="container-fluid">
+    <div class="row no-gutters">
+        {{!-- User Input Flyout --}}
+        <div class="col-3">
+            
+            {{!-- Cycler Container --}}
+            <div class="cycle-div w-100 d-flex flex-row justify-content-center">
+                <button class="cycle-btn" id="prev-btn">
+                    Prev
+                </button>
+                <input type="text" id="burger-name">
+                <button class="cycle-btn" id="next-btn">
+                    Next
+                </button>
+            </div>
+
+            {{!-- Buttons Container --}}
+            <div class="button-div w-100 d-flex flex-row justify-content-between">
+                <button class="burger-btn" id="save-btn">
+                    Save
+                </button>
+                <button class="burger-btn" id="view-btn">
+                    View
+                </button>
+                <button class="burger-btn" id="reset-btn">
+                    Reset
+                </button>
+            </div>
+
+            {{!-- Options Panel --}}
+            <div class="options-column">
+                {{!-- Buns Column --}}
+                <div class="options-div" id="buns">
+                    <h2>Buns</h2>
+                    <div class="burger-option">
+                        Plain
+                    </div>
+                    <div class="burger-option">
+                        Sesame
+                    </div>
+                    <div class="burger-option">
+                        Pumpernickel
+                    </div>
+                </div>
+
+                {{!-- Patty Column --}}
+                <div class="options-div" id="patties">
+                    <h2>Patty</h2>
+                    <div class="burger-option">
+                        Single
+                    </div>
+                    <div class="burger-option">
+                        Double
+                    </div>
+                    <div class="burger-option">
+                        Triple
+                    </div>
+                </div>
+
+                {{!-- Toppings Column --}}
+                <div class="options-div" id="toppings">
+                    <h2>Toppings</h2>
+                    <div class="burger-option">
+                        Cheese
+                    </div>
+                    <div class="burger-option">
+                        Lettuce
+                    </div>
+                    <div class="burger-option">
+                        Tomato
+                    </div>
+                    <div class="burger-option">
+                        Onions
+                    </div>
+                    <div class="burger-option">
+                        Bacon
+                    </div>
+                    <div class="burger-option">
+                        Egg
+                    </div>
+                    <div class="burger-option">
+                        Pickles
+                    </div>
+                </div>
+
+                {{!-- Sauces Column --}}
+                <div class="options-div" id="sauces">
+                    <h2>Sauces</h2>
+                    <div class="burger-option">
+                        Ketchup
+                    </div>
+                    <div class="burger-option">
+                        Mustard
+                    </div>
+                </div>
+            </div>
         </div>
 
-        {{!-- Options Panel --}}
-        <div class="options-column">
-            {{!-- Buns Column --}}
-            <div class="options-div" id="buns">
-                <h2>Buns</h2>
-                <div class="burger-option">
-                    Plain
-                </div>
-                <div class="burger-option">
-                    Sesame
-                </div>
-                <div class="burger-option">
-                    Pumpernickel
-                </div>
-            </div>
-            {{!-- Patty Column --}}
-            <div class="options-div" id="patties">
-                <h2>Patty</h2>
-                <div class="burger-option">
-                    Single
-                </div>
-                <div class="burger-option">
-                    Double
-                </div>
-                <div class="burger-option">
-                    Triple
-                </div>
-            </div>
-            {{!-- Toppings Column --}}
-            <div class="options-div" id="toppings">
-                <h2>Toppings</h2>
-                <div class="burger-option">
-                    Cheese
-                </div>
-                <div class="burger-option">
-                    Lettuce
-                </div>
-                <div class="burger-option">
-                    Tomato
-                </div>
-                <div class="burger-option">
-                    Onions
-                </div>
-                <div class="burger-option">
-                    Bacon
-                </div>
-                <div class="burger-option">
-                    Egg
-                </div>
-                <div class="burger-option">
-                    Pickles
-                </div>
-            </div>
-            {{!-- Sauces Column --}}
-            <div class="options-div" id="sauces">
-                <h2>Sauces</h2>
-                <div class="burger-option">
-                    Ketchup
-                </div>
-                <div class="burger-option">
-                    Mustard
-                </div>
-            </div>
+        {{!-- Burger Slider --}}
+        <div class="col-9 burger-slider d-flex flex-column align-items-center">
+            
+            <img src="Glass_Plate.png" id="plate">
         </div>
-    </div>
-
-    {{!-- Burger Slider --}}
-    <div class="col-9 burger-slider d-flex flex-column align-items-center">
-        <img src="Glass_Plate.png" id="plate">
-    </div>
-<div>
+    <div>
+</div>
