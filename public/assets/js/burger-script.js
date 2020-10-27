@@ -21,6 +21,11 @@ $(document).ready(() => {
     });
 });
 
+// Logs user out
+function logoutHandler(){
+    
+}
+
 // BURGER RENDERING METHODS
 // =============================================
 
@@ -43,7 +48,7 @@ function moveButtonHandler(arg_event){
 
             // Render burger
             renderBurger(arg_data.ingredients);
-            
+
             // Highlight the burger selections
             for(let i = 0; i < 15; i++){
                 let t_div = $(".burger-option")[i];

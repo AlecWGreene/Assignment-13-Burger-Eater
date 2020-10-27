@@ -1,11 +1,7 @@
 // Dependencies
 require('dotenv').config();
-const mysql = require("mysql");
 const express = require("express");
 const expHB = require("express-handlebars");
-const fs = require("fs");
-const util = require("util");
-const path = require("path");
 const session = require("express-session");
 
 // Load scripts
