@@ -1,5 +1,6 @@
 // Dependencies
 require('dotenv').config();
+const connection = require("./lib/config/connection.js");
 const express = require("express");
 const expHB = require("express-handlebars");
 const session = require("express-session");
@@ -32,7 +33,16 @@ app.use(pageController);
 app.use(loginRouter);
 app.use(burgerRouter);
 
-// Initialize application
-app.listen(PORT, function() {
-    console.log("Burger Eater now listening at localhost:" + PORT);
-});
+// Make connection
+connection.connect(function(err) {
+    if (err) {
+      console.error("error connecting: " + err.message + "," + err.sqlMessage + "\n" +err.stack);
+      return;
+    }
+    console.log("connected to DB using id " + connection.threadId);
+
+    // Initialize application
+    app.listen(PORT, function() {
+        console.log("Burger Eater now listening at localhost:" + PORT);
+    });
+  })
